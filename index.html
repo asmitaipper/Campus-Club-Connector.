@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campus Club Connector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Campus Club Connector</div>
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search clubs or events..."
+      />
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Filters</h2>
+
+      <div class="filter-group">
+        <h3>Category</h3>
+        <button class="chip filter-category active" data-category="all">
+          All
+        </button>
+        <button class="chip filter-category" data-category="technical">
+          Technical
+        </button>
+        <button class="chip filter-category" data-category="cultural">
+          Cultural
+        </button>
+        <button class="chip filter-category" data-category="sports">
+          Sports
+        </button>
+        <button class="chip filter-category" data-category="social">
+          Social
+        </button>
+      </div>
+
+      <div class="filter-group">
+        <h3>Membership</h3>
+        <button class="chip membership-filter active" data-membership="all">
+          All
+        </button>
+        <button class="chip membership-filter" data-membership="joined">
+          Joined
+        </button>
+        <button class="chip membership-filter" data-membership="notJoined">
+          Not joined
+        </button>
+      </div>
+
+      <section class="joined-clubs">
+        <h2>My Clubs</h2>
+        <ul id="joinedClubsList" class="joined-list">
+          <!-- Filled by JS -->
+        </ul>
+        <p class="hint">
+          Join clubs to see them here and track their events quickly.
+        </p>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="hero">
+        <div>
+          <h1>Discover clubs on your campus</h1>
+          <p>
+            Browse all clubs, explore upcoming events, and manage your memberships
+            in one place.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat-card">
+            <span id="totalClubsCount">0</span>
+            <small>Total clubs</small>
+          </div>
+          <div class="stat-card">
+            <span id="joinedClubsCount">0</span>
+            <small>Joined clubs</small>
+          </div>
+          <div class="stat-card">
+            <span id="upcomingEventsCount">0</span>
+            <small>Upcoming events</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Clubs</h2>
+          <span id="clubsResultInfo" class="result-info"></span>
+        </div>
+        <div id="clubsContainer" class="card-grid">
+          <!-- Club cards via JS -->
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Upcoming events</h2>
+          <span id="eventsResultInfo" class="result-info"></span>
+        </div>
+        <div id="eventsContainer" class="card-grid">
+          <!-- Event cards via JS -->
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Built as a demo project: Campus Club Connector – manage your campus clubs
+      and events.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
